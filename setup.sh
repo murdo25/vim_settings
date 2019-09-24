@@ -39,5 +39,11 @@ if [ ! -d ~/.vim/bundle/vim-sensible ]; then
 fi
 
 
-echo "make sure the good .vimrc is in this folder"
-cp .vimrc ~/.vimrc
+if [ ! -d .vimrc ]; then
+  echo "make sure the good .vimrc is in this folder"
+  echo "failed"
+else
+    cp .vimrc ~/.vimrc
+fi
+
+
